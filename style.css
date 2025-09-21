@@ -1,0 +1,101 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255,255,255,0.95);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  text-align: center;
+  min-width: 340px;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: #22223b;
+  font-size: 2.1rem;
+  letter-spacing: 1px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 0.8rem;
+  border: 2px solid #fcb69f;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(252,182,159,0.08);
+  background: #fff8f3;
+}
+
+input[type="text"]:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 0 2px #ffecd2;
+}
+
+button {
+  padding: 0.8rem 1.7rem;
+  background: linear-gradient(90deg, #ff6f61 0%, #fcb69f 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, transform 0.1s;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(252,182,159,0.12);
+}
+
+button:hover {
+  background: linear-gradient(90deg, #ff6f61 20%, #ffecd2 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+#qrcode {
+  margin-top: 1.5rem;
+  min-height: 200px;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s;
+}
+
+#qrcode img {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(252,182,159,0.18);
+  background: #fff;
+  padding: 8px;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  15% { transform: translateX(-10px); }
+  30% { transform: translateX(10px); }
+  45% { transform: translateX(-8px); }
+  60% { transform: translateX(8px); }
+  75% { transform: translateX(-4px); }
+  90% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+
+.input-error {
+  border-color: #ff6f61 !important;
+  animation: shake 0.4s;
+  background: #fff0ee;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
